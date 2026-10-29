@@ -1,0 +1,256 @@
+/*Selects every element - helps with formatting and keeping items inside borders */
+* {
+    box-sizing: border-box;
+}
+
+/*Use Arial font - 20px margin outside - 20px padding inside*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #2a52be;
+    border-radius: 10px;
+}
+
+/*heading h1 will be white and centered*/
+body h1 {
+    color: white;
+    text-align: center;
+}
+
+/*heading h2 will be white and centered*/
+body h2 {
+    color: white;
+    text-align: center;
+}
+
+/*All heading will be in Times new Roman font and 30px font size*/
+h1, h2, h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+
+/*links are blue and underlined*/
+a {
+    color: #2a52be;
+    text-decoration: underline;
+}
+
+/*Items within the header will be in a blue box with white text
+20px padding inside border - 20px margin at the bottom until next container*/
+header {
+    background-color: #2a52be;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/*List displayed as flex container - no bullet points!*/
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+/*text inside will be white and bold*/
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*The main content of the website cannot exceed 1000px - margins are autofixed - 30px extra space at top/bottom 20px left/right*/
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+/*heading h2 inside main will be centered and blue with 20px of margin below it*/
+main h2 {
+    text-align: center;
+    color: #2a52be;
+    margin-bottom: 20px;
+}
+
+/*Styles "Explore the Caribbean" container on index.html - relative position keeps the element
+in a good flow spot for the document - 50px padding above/below 10px padding left/right - centered and white text with a blue background*/
+.home > section:first-child {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 50px 10px;
+    background-color: #2a52be;
+}
+
+/*h2 heading with blue background needs white text*/
+.home > section:first-child h2 {
+    color: white;
+}
+
+/*Style destination cards in index.html and destinations.html - 20px gap between all elements - 20px of margin above*/
+.home > section:nth-child(2) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/*headings take up entire row and are centered and blue*/
+.home > section:nth-child(2) > h2 {
+    width: 100%;
+    text-align: center;
+    color: #2a52be;
+}
+
+/*The individual destinations have their own containers with a small blue border and 20px of padding on the inside - rounded corners*/
+.destination {
+    background-color: white;
+    border: 2px solid #2a52be;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/*images take up whole row - rounded corners - 10px margin beneath image*/
+.destination img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/*h3 in destination class is blue and centered with 10px of margin beneath*/
+.destination h3 {
+    color: #2a52be;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/*paragraphs in destination class have black text and are centered*/
+.destination p {
+    color: black;
+    text-align: center;
+}
+
+/*Display the destination containers in a 2x2 grid - 15px gap between each*/
+.destination-page {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+/*Same layout and colors as destination containers*/
+.activity {
+    background-color: white;
+    border: 2px solid #2a52be;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/*h3 heading in activity class is blue and centered*/
+.activity h3 {
+    color: #2a52be;
+    text-align: center;
+}
+
+/*Format list & bullet points*/
+.activity ul {
+    padding-left: 25px;
+}
+
+/*able to scroll on table if it is bigger than the container can hold*/
+.table-container {
+    overflow-x: auto;
+}
+
+/*the table fills its containers and the borders of cells next to each other are combined to make 1 collective border*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+/*creating the table and centering the text*/
+th, td {
+    border: 1px solid #2a52be;
+    padding: 5px;
+    text-align: center;
+}
+
+/*same layout and colors as destination and activity containers*/
+.island-info {
+    background-color: white;
+    border: 2px solid #2a52be;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/*h3 header in island-info class is blue and centered*/
+.island-info h3 {
+    color: #2a52be;
+    text-align: center;
+}
+
+/*format lists in main*/
+main ul {
+    padding-left: 25px;
+}
+
+/*styling the form in contact.html with rounded 2px blue borders - 600px allows so the container does not get too wide*/
+form {
+    background-color: white;
+    border: 2px solid #2a52be;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+}
+
+/*Labels on form are displayed in block form and are blue with 5px of margin below*/
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #2a52be;
+}
+
+/*building the button*/
+button {
+    background-color: #2a52be;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*button turns green when hovered over*/
+button:hover {
+    background-color: green;
+}
+
+/*footer design*/
+footer {
+    background-color: #2a52be;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/*Media query for smaller screens*/
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .destination-page {
+        grid-template-columns: 1fr;
+    }
+}
